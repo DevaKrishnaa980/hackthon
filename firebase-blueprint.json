@@ -1,0 +1,57 @@
+{
+  "entities": {
+    "UserProfile": {
+      "fields": {
+        "fullName": { "type": "string", "required": true },
+        "email": { "type": "string", "required": true },
+        "role": { "type": "string", "required": true },
+        "college": { "type": "string" },
+        "department": { "type": "string" },
+        "year": { "type": "string" },
+        "skills": { "type": "array" },
+        "areasOfInterest": { "type": "array" },
+        "location": { "type": "string" },
+        "createdAt": { "type": "string", "required": true }
+      }
+    },
+    "Project": {
+      "fields": {
+        "ownerId": { "type": "string", "required": true },
+        "ownerName": { "type": "string", "required": true },
+        "title": { "type": "string", "required": true },
+        "domain": { "type": "string", "required": true },
+        "stage": { "type": "string", "required": true },
+        "technologies": { "type": "array" },
+        "requirements": { "type": "array" },
+        "isDiscoverable": { "type": "boolean", "required": true },
+        "createdAt": { "type": "string", "required": true }
+      }
+    },
+    "Collaboration": {
+      "fields": {
+        "projectAId": { "type": "string", "required": true },
+        "projectBId": { "type": "string", "required": true },
+        "senderId": { "type": "string", "required": true },
+        "receiverId": { "type": "string", "required": true },
+        "status": { "type": "string", "required": true },
+        "createdAt": { "type": "string", "required": true }
+      }
+    },
+    "Milestone": {
+      "fields": {
+        "projectId": { "type": "string", "required": true },
+        "title": { "type": "string", "required": true },
+        "status": { "type": "string", "required": true },
+        "deadline": { "type": "string", "required": true }
+      }
+    }
+  },
+  "firestore": {
+    "collections": {
+      "users": { "entity": "UserProfile" },
+      "projects": { "entity": "Project" },
+      "collaborations": { "entity": "Collaboration" },
+      "milestones": { "entity": "Milestone" }
+    }
+  }
+}

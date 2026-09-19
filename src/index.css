@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #FAF8FF;
+    color: #1E1B4B;
+    overflow-x: hidden;
+  }
+}
+
+/* Reusable SaaS & EdTech Design System Classes */
+.bg-canvas-lavender {
+  background-color: #FAF8FF;
+}
+
+.bg-hero-gradient {
+  background: radial-gradient(120% 80% at 50% 0%, #F1EAFF 0%, #FAF8FF 60%, #FFFFFF 100%);
+}
+
+.bg-purple-primary-gradient {
+  background: linear-gradient(135deg, #B76BE8 0%, #7C4DFF 100%);
+}
+
+.bg-purple-btn-gradient {
+  background: linear-gradient(135deg, #A855F7 0%, #7C3AED 50%, #6366F1 100%);
+}
+
+.card-saas {
+  background-color: #FFFFFF;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(233, 225, 254, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(124, 77, 255, 0.07), 0 4px 12px -2px rgba(124, 77, 255, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-saas:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px -10px rgba(124, 77, 255, 0.14), 0 6px 16px -2px rgba(124, 77, 255, 0.05);
+  border-color: rgba(196, 181, 253, 0.8);
+}
+
+.card-saas-static {
+  background-color: #FFFFFF;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(233, 225, 254, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(124, 77, 255, 0.07);
+}
+
+.floating-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(243, 238, 255, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 16px 36px -8px rgba(124, 77, 255, 0.18), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes gentle-float-alt {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: gentle-float-alt 5s ease-in-out 1s infinite;
+}

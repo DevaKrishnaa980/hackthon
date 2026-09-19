@@ -1,0 +1,6 @@
+{
+  "name": "IdeaTec",
+  "description": "Give Every Student Project a Second Life. An AI-powered platform preventing student innovation from being abandoned after hackathons and competitions through Project DNA, maturity scoring, smart matching, and Project Fusion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
